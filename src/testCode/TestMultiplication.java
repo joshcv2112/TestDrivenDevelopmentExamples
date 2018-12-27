@@ -2,13 +2,20 @@ package testCode;
 
 import junit.framework.TestCase;
 import src.Dollar;
+import src.Franc;
 
 public class TestMultiplication extends TestCase {
 	
-	public void testMultiplication() {
+	public void testDollarMultiplication() {
 		Dollar five = new Dollar(5);
 		assertEquals(new Dollar(10), five.times(2));
 		assertEquals(new Dollar(15), five.times(3));
+	}
+	
+	public void testFrancMultiplication() {
+		Franc five = new Franc(5);
+		assertEquals(new Franc(10), five.times(2));
+		assertEquals(new Franc(15), five.times(3));
 	}
 	
 	public void testEquality() {
