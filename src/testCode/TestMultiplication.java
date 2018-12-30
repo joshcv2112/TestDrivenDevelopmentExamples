@@ -1,6 +1,7 @@
 package testCode;
 
 import junit.framework.TestCase;
+import src.Franc;
 import src.Money;
 
 public class TestMultiplication extends TestCase {
@@ -23,6 +24,10 @@ public class TestMultiplication extends TestCase {
 		assertTrue(Money.franc(5).equals(Money.franc(5)));
 		assertFalse(Money.franc(5).equals(Money.franc(6)));
 		assertFalse(Money.franc(5).equals(Money.dollar(5)));
+	}
+	
+	public void testDifferentClassEquality() {
+		assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
 	}
 	
 	public void testCurrency() {
